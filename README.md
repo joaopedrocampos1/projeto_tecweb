@@ -1,1 +1,1 @@
-Pratica Precensial 1 e 2.
+Pratica Presencial 1 e 2.

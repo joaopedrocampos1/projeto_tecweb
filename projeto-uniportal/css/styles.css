@@ -1,0 +1,234 @@
+/* ============================================================
+   VARIÁVEIS E RESET
+   ============================================================ */
+:root {
+    --vermelho-uni: #B20000;
+    --vermelho-dark: #8b0000;
+    --branco: #ffffff;
+    --fundo: #f4f4f4;
+    --texto: #333;
+    --sidebar-width: 240px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--fundo);
+    color: var(--texto);
+}
+
+/* ============================================================
+   TELA DE LOGIN (Página: index.html)
+   ============================================================ */
+.login-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--vermelho-uni); /* Fundo vermelho igual ao seu design */
+}
+
+.login-box {
+    background: var(--branco);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 380px;
+    text-align: center;
+}
+
+.login-box h1 {
+    margin-bottom: 10px;
+    color: var(--vermelho-uni);
+}
+
+.login-box form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.login-box label {
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.login-box input {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+.login-box button {
+    background: var(--vermelho-uni);
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-box button:hover {
+    background: var(--vermelho-dark);
+}
+
+/* ============================================================
+   LAYOUT DASHBOARD (Páginas: home e listagem)
+   ============================================================ */
+.wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar (Menu Lateral) */
+.sidebar {
+    width: var(--sidebar-width);
+    background-color: var(--vermelho-uni);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+    position: fixed;
+    height: 100%;
+}
+
+.sidebar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.sidebar menu {
+    list-style: none;
+    flex-grow: 1;
+}
+
+.sidebar menu li {
+    margin-bottom: 15px;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 12px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.sidebar a.active, .sidebar a:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+/* Botão Sair no Footer do Menu */
+.btn-logout {
+    text-align:center;
+    background: none;
+    border: 0.1rem solid #af0303;
+    color: white;
+    width: 12rem;
+    padding: 0.7rem;
+    border-radius:0.4rem;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;      /* Alinha o ícone e o texto na mesma altura */
+    justify-content: left;  /* Centraliza tudo dentro do botão */
+    gap: 8px;
+}
+
+.btn-logout:hover {
+    background: rgb(255, 255, 255);
+    color: var(--vermelho-uni);
+}
+
+
+/* Isso empurra o footer para o extremo inferior da sidebar */
+.sidebar footer {
+    display: flex;
+    justify-content: left;
+    margin-top: auto;
+}
+
+
+/* Conteúdo Principal */
+.content {
+    margin-left: var(--sidebar-width);
+    padding: 40px;
+    width: 100%;
+}
+
+.content header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* Cards Semânticos */
+article.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border-left: 6px solid var(--vermelho-uni);
+}
+
+/* Tabelas Semânticas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+th {
+    background: var(--vermelho-uni);
+    color: white;
+    text-align: left;
+    padding: 15px;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+/* ============================================================
+   RESPONSIVIDADE (MOBILE)
+   ============================================================ */
+@media (max-width: 768px) {
+    .wrapper {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 15px;
+    }
+    .content {
+        margin-left: 0;
+        padding: 20px;
+    }
+    .sidebar .logo {
+        margin-bottom: 15px;
+    }
+    .sidebar menu {
+        display: flex;
+        justify-content: space-around;
+    }
+}

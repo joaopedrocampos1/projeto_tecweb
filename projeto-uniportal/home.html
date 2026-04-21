@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniPortal - Home</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="app-layout">
+    
+    <aside class="sidebar">
+        <header class="sidebar-header">
+            <h2 class="logo">UniPortal</h2>
+        </header>
+        
+        <section class="user-profile">
+            <figure class="avatar">JS</figure>
+            <address class="user-info">
+                <strong>Jo&atilde;o Silva</strong>
+                <span>RA: 2512130067</span>
+            </address>
+        </section>
+
+        <nav>
+            <menu>
+                <li><a href="home.html" class=> Início</a></li>
+                <li><a href="disciplinas.html"> Disciplinas</a></li>
+                <li><a href="boletim.html"> Boletim</a></li>
+                <li><a href="carteirinha.html"> Carteirinha</a></li>
+                <li><a href="faturas.html"> Faturas</a></li>
+            </menu>
+        </nav>
+        <footer>
+            <button id="btnSair" class="btn-logout">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                Sair
+            </button>
+        </footer>
+    </aside>
+
+    <main class="content">
+        <header class="top-header">
+            <hgroup class="header-titles">
+                <h1>In&iacute;cio</h1>
+                <p>segunda-feira, 13 de abril de 2026</p>
+            </hgroup>
+            <section class="header-badges">
+                <span class="badge badge-red">5&ordm; Semestre</span>
+                <span class="badge badge-dark">Ci&ecirc;ncia da Computa&ccedil;&atilde;o</span>
+            </section>
+        </header>
+
+        <section class="dashboard-grid">
+            
+            <section class="main-column">
+                <h2 class="section-title">AULA DE HOJE</h2>
+                <article class="card card-destaque">
+                    <header class="card-header">
+                        <h3>Projeto Integrador</h3>
+                        <span class="tag-turma">Turma A</span>
+                    </header>
+                    <p class="prof-name">Prof. Marcelo Alves Farias</p>
+                    <footer class="card-footer-info">
+                        <span>11:00 - 12:15</span>
+                        <span>Sala PA85 - Bloco J</span>
+                    </footer>
+                </article>
+
+                <h2 class="section-title">PR&Oacute;XIMAS AULAS</h2>
+                <article class="card">
+                    <header class="card-header">
+                        <h3>C&aacute;lculo Num&eacute;rico</h3>
+                        <span class="tag-turma">Seg - 08:15</span>
+                    </header>
+                    <p class="prof-name">Prof. Valnei Alves Fernandes</p>
+                    <footer class="card-footer-info">
+                        <span>Sala PCA2</span>
+                    </footer>
+                </article>
+            </section>
+
+            <aside class="side-column">
+                <h2 class="section-title">PEND&Ecirc;NCIAS</h2>
+                <article class="card card-alerta">
+                    <header class="card-header">
+                        <h3 class="red-text">Cobran&ccedil;a</h3>
+                        <span class="tag-pendente">Pendente</span>
+                    </header>
+                    <p>Mensalidade Mar&ccedil;o/2026</p>
+                    <p>Vencimento: 28/03/2026</p>
+                    <h4 class="preco">R$ 850,00</h4>
+                    <a class="btn-acao" href="faturas.html#pendentes">Ver faturas</a>
+                </article>
+
+                <h2 class="section-title">SITUA&Ccedil;&Atilde;O ACAD&Ecirc;MICA</h2>
+                <article class="card">
+                    <section class="stats-row">
+                        <span class="stat green">M&eacute;dia 8.1</span>
+                        <span class="stat blue">Freq. 86%</span>
+                    </section>
+                    <p class="status-msg">Desempenho acima da m&eacute;dia. <strong>Continue assim!</strong></p>
+                </article>
+            </aside>
+
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

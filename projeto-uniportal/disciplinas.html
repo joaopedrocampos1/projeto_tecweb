@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UniPortal - Carteirinha</title>
     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
@@ -26,15 +27,35 @@
             </address>
         </section>
 
-        <nav>
-            <menu>
-                <li><a href="home.html">Início</a></li>
-                <li><a href="disciplinas.html" class="active">Disciplinas</a></li>
-                <li><a href="boletim.html">Boletim</a></li>
-                <li><a href="carteirinha.html">Carteirinha</a></li>
-                <li><a href="faturas.html">Faturas</a></li>
-            </menu>
-        </nav>
+       <nav>
+    <menu>
+        <li>
+            <a href="home.html">
+                <i class="fa-solid fa-house"></i> Início
+            </a>
+        </li>
+        <li>
+            <a href="disciplinas.html">
+                <i class="fa-solid fa-book"></i> Disciplinas
+            </a>
+        </li>
+        <li>
+            <a href="boletim.html">
+                <i class="fa-solid fa-chart-simple"></i> Boletim
+            </a>
+        </li>
+        <li>
+            <a href="carteirinha.html">
+                <i class="fa-solid fa-id-card"></i> Carteirinha
+            </a>
+        </li>
+        <li>
+            <a href="faturas.html">
+                <i class="fa-solid fa-file-invoice-dollar"></i> Faturas
+            </a>
+        </li>
+    </menu>
+</nav>
 
         <footer>
             <button id="btnSair" class="btn-logout">
@@ -51,13 +72,15 @@
     <main class="content">
         <header class="top-header">
             <hgroup class="header-titles">
-                <h1>Minhas Disciplinas</h1>
-                <p>segunda-feira, 13 de abril de 2026</p>
+                <h1>Início</h1>
+                <p>segunda-feira, 20 de abril de 2026</p>
             </hgroup>
-
             <section class="header-badges">
                 <span class="badge badge-red">5º Semestre</span>
                 <span class="badge badge-dark">Ciência da Computação</span>
+                <button id="btnTema" class="btn-tema-topo" aria-label="Alternar tema">
+                🌙 Escuro
+                </button>
             </section>
         </header>
 

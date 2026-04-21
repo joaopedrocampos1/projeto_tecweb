@@ -422,3 +422,273 @@ td { padding: 15px; border-bottom: 1px solid var(--borda); }
     .fatura-meta { align-items: flex-end; }
     .fatura-pagar { width: auto; min-width: 160px; }
 }
+/* ============================================================
+   ESTILO DO NOVO BOTÃO DE TEMA NO TOPO
+   ============================================================ */
+.btn-tema-topo {
+    background-color: var(--vermelho-uni);
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-tema-topo:hover {
+    filter: brightness(1.2);
+    transform: scale(1.05);
+}
+
+/* ============================================================
+   TEMA ESCURO (DARK MODE) - CORRIGIDO
+   ============================================================ */
+body.dark-theme {
+    /* Redefinindo as variáveis principais */
+    --vermelho-uni: #d32f2f; /* Vermelho mais vibrante para contraste no escuro */
+    --branco: #1e1e1e;       /* Fundo dos cards e barra lateral */
+    --fundo: #121212;        /* Fundo geral da página */
+    --texto: #f4f4f4;        /* Texto principal claro */
+    --texto-sec: #b0b0b0;    /* Texto secundário */
+    --borda: #333333;        /* Linhas divisórias escuras */
+}
+
+/* Forçando a Sidebar a ficar escura */
+body.dark-theme .sidebar {
+    background-color: var(--branco);
+    border-right: 1px solid var(--borda);
+}
+
+/* Forçando os textos a ficarem claros */
+body.dark-theme h1, 
+body.dark-theme h2, 
+body.dark-theme h3, 
+body.dark-theme h4, 
+body.dark-theme p, 
+body.dark-theme span, 
+body.dark-theme strong, 
+body.dark-theme a,
+body.dark-theme .user-info strong {
+    color: var(--texto);
+}
+
+/* Textos secundários (RA, subtítulos, dicas) */
+body.dark-theme .user-info span,
+body.dark-theme .texto-secundario,
+body.dark-theme .status-msg {
+    color: var(--texto-sec);
+}
+
+/* Garantindo que o fundo do App mude */
+body.dark-theme.app-layout {
+    background-color: var(--fundo);
+}
+
+/* Ajustando Cards e Tabelas */
+body.dark-theme .card, 
+body.dark-theme .login-box {
+    background-color: var(--branco);
+    border: 1px solid var(--borda);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Exceções: mantendo botões ou textos que SEMPRE devem ser brancos ou coloridos */
+body.dark-theme .btn-acao,
+body.dark-theme .btn-tema-topo {
+    color: #ffffff; /* O texto dentro dos botões vermelhos precisa continuar branco */
+}
+
+body.dark-theme .red-text { color: #ff5252; } /* Vermelho de alerta mais visível */
+/* ============================================================
+   TEMA ESCURO GLOBAL (TODAS AS PÁGINAS)
+   ============================================================ */
+body.dark-theme {
+    /* Ajusta apenas o fundo geral e textos base */
+    --fundo: #121212;        
+    --texto: #f4f4f4;        
+    --texto-sec: #b0b0b0;    
+    --borda: #333333;        
+}
+
+/* 1. MUDAR O FUNDO GERAL DO APP */
+body.dark-theme.app-layout,
+body.dark-theme.login-page {
+    background-color: var(--fundo);
+    color: var(--texto);
+}
+
+/* 2. ESCURECER TODAS AS CAIXAS BRANCAS DO SITE (AGRUPAMENTO MÁGICO ESCURO) */
+body.dark-theme .card, 
+body.dark-theme .stat-box, 
+body.dark-theme .distribuicao-card, 
+body.dark-theme .boletim-materia-card,
+body.dark-theme .login-box,
+body.dark-theme table,
+body.dark-theme th,
+body.dark-theme td,
+body.dark-theme .faturas-tabs,
+body.dark-theme .student-card-qr,
+body.dark-theme .validation-qr {
+    background-color: #1e1e1e !important;
+    border-color: var(--borda) !important;
+}
+
+/* 3. FORÇAR TEXTOS PRINCIPAIS A FICAREM CLAROS (H1, H2, H3, P, etc) */
+body.dark-theme .content h1, 
+body.dark-theme .content h2, 
+body.dark-theme .content h3, 
+body.dark-theme .content h4, 
+body.dark-theme .content p, 
+body.dark-theme .content strong, 
+body.dark-theme table td {
+    color: var(--texto) !important;
+}
+
+/* 4. TEXTOS SECUNDÁRIOS EM TONS DE CINZA (Professores, legendas, datas) */
+body.dark-theme .texto-secundario,
+body.dark-theme .prof-name,
+body.dark-theme .card-footer-info,
+body.dark-theme .materia-info span,
+body.dark-theme .materia-frequencia p,
+body.dark-theme .barra-legendas,
+body.dark-theme .fatura-info p,
+body.dark-theme .summary-note,
+body.dark-theme .info-label,
+body.dark-theme .validation-text,
+body.dark-theme .circulo-centro p {
+    color: var(--texto-sec) !important;
+}
+
+/* 5. PROTEÇÃO DA BARRA LATERAL (Manter Vermelha) */
+body.dark-theme .sidebar {
+    background-color: var(--vermelho-uni) !important;
+    border-right: none;
+}
+body.dark-theme .sidebar .logo,
+body.dark-theme .sidebar .user-info strong,
+body.dark-theme .sidebar menu a,
+body.dark-theme .sidebar .user-info span {
+    color: #ffffff !important;
+}
+body.dark-theme .avatar {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    color: #ffffff !important;
+    border: 2px solid #ffffff !important;
+}
+body.dark-theme .sidebar menu a:hover,
+body.dark-theme .sidebar menu a.active {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* 6. PROTEÇÃO DE BOTÕES E ELEMENTOS VERMELHOS (Devem ter letra branca) */
+body.dark-theme .btn-acao,
+body.dark-theme .btn-tema-topo,
+body.dark-theme table th,
+body.dark-theme .badge-red {
+    color: #ffffff !important;
+}
+
+/* 7. AJUSTES ESPECÍFICOS DE PÁGINAS */
+/* Etiquetas cinzentas na Home */
+body.dark-theme .tag-turma,
+body.dark-theme .tag-gray {
+    background-color: #333333 !important;
+    color: #ffffff !important;
+}
+/* Círculo da Média (Boletim) */
+body.dark-theme .circulo-centro {
+    background-color: #1e1e1e !important;
+}
+/* Cores numéricas que devem ficar vermelhas */
+body.dark-theme .red-text,
+body.dark-theme .stat-value.red,
+body.dark-theme .materia-nota,
+body.dark-theme .fatura-valor {
+    color: #ff5252 !important; /* Vermelho mais vivo no ecrã escuro */
+}
+/* Carteirinha (manter os textos e gradiente originais) */
+body.dark-theme .student-card h3,
+body.dark-theme .student-card p,
+body.dark-theme .student-card strong,
+body.dark-theme .student-card .student-card-logo {
+    color: #ffffff !important;
+}
+/* ============================================================
+   CORREÇÃO: CARDS DE DISCIPLINAS DO BOLETIM (GERADOS POR JS)
+   ============================================================ */
+body.dark-theme #cardsBoletim > * {
+    background-color: #1e1e1e !important;
+    border: 1px solid #333333 !important;
+}
+
+/* Nome da matéria */
+body.dark-theme #cardsBoletim h3 {
+    color: #f4f4f4 !important;
+}
+
+/* Textos menores e código da disciplina */
+body.dark-theme #cardsBoletim span,
+body.dark-theme #cardsBoletim p {
+    color: #b0b0b0 !important;
+}
+
+/* Nota grande vermelha */
+body.dark-theme #cardsBoletim .materia-nota {
+    color: #ff5252 !important;
+}
+
+/* Fundo da barra de progresso */
+body.dark-theme #cardsBoletim .barra-fundo {
+    background-color: #333333 !important;
+}
+/* ============================================================
+   CORREÇÃO: TAGS E ETIQUETAS COLORIDAS NO TEMA ESCURO
+   ============================================================ */
+
+/* Tags Verdes (Aprovado, Frequência, Fatura Paga) */
+body.dark-theme .tag-green,
+body.dark-theme .stat.green,
+body.dark-theme .fatura-status--pago {
+    background-color: rgba(39, 174, 96, 0.15) !important; /* Fundo verde transparente */
+    color: #4ade80 !important; /* Texto verde neon para dar leitura */
+    border-color: rgba(39, 174, 96, 0.3) !important;
+}
+
+/* Tags Amarelas (Em risco) */
+body.dark-theme .tag-yellow {
+    background-color: rgba(243, 156, 18, 0.15) !important; /* Fundo amarelo transparente */
+    color: #fbbf24 !important; /* Texto amarelo brilhante */
+}
+
+/* Tags Azuis (Ex: Etiqueta de frequência na Home) */
+body.dark-theme .stat.blue {
+    background-color: rgba(41, 128, 185, 0.15) !important; /* Fundo azul transparente */
+    color: #60a5fa !important; /* Texto azul claro */
+    border-color: rgba(41, 128, 185, 0.3) !important;
+}
+/* ============================================================
+   CORREÇÃO: BORDAS LATERAIS COLORIDAS (HOME E FATURAS)
+   ============================================================ */
+
+/* Restaura a ESPESSURA (5px) e a cor verde na disciplina de hoje */
+body.dark-theme .card-destaque {
+    border-left: 5px solid #4ade80 !important; 
+}
+
+/* Restaura a ESPESSURA (5px) e a cor vermelha nos alertas e faturas pendentes */
+body.dark-theme .card-destaque2,
+body.dark-theme .card-alerta,
+body.dark-theme .fatura-item {
+    border-left: 5px solid #ff5252 !important; 
+}
+
+/* Restaura a ESPESSURA (5px) e a cor verde nas faturas já pagas (Histórico) */
+body.dark-theme .fatura-item--historico {
+    border-left: 5px solid #4ade80 !important; 
+}

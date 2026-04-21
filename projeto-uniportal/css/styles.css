@@ -17,7 +17,52 @@
    LAYOUT BASE (MOBILE-FIRST)
    ============================================================ */
 body.app-layout { font-family: 'Segoe UI', sans-serif; background: var(--fundo); color: var(--texto); display: flex; flex-direction: column; min-height: 100vh; }
+/* ============================================================
+   TELA DE LOGIN (index.html)
+   ============================================================ */
+body.login-page {
+    font-family: 'Poppins', sans-serif; 
+    background-color: var(--vermelho-uni);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
 
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.login-box {
+    background: var(--branco);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.login-box h2 { font-size: 1.5rem; margin-bottom: 5px; color: var(--texto); }
+.login-box p { color: var(--texto-sec); font-size: 0.9rem; margin-bottom: 25px; }
+.login-box form { display: flex; flex-direction: column; text-align: left; }
+.login-box label { font-size: 0.8rem; font-weight: bold; color: var(--texto-sec); margin-bottom: 5px; }
+.login-box input { padding: 12px; margin-bottom: 20px; border: 1px solid var(--borda); border-radius: 8px; font-size: 1rem; }
+.login-box button { background: var(--vermelho-uni); color: var(--branco); border: none; padding: 15px; border-radius: 8px; font-weight: bold; cursor: pointer; transition: 0.3s; font-size: 1rem; }
+.login-box button:hover { background: #8b0000; }
+#mensagemFeedback { margin-top: 15px; text-align: center; font-size: 0.9rem; }
+
+/* ============================================================
+   LAYOUT BASE (MOBILE-FIRST)
+   ============================================================ */
+body.app-layout { 
+    font-family: 'Poppins', sans-serif;
+    background: var(--fundo); 
+    color: var(--texto); 
+    display: flex; 
+    flex-direction: column; 
+    min-height: 100vh; 
+}
 /* --- SIDEBAR --- */
 .sidebar { width: 100%; background: var(--vermelho-uni); color: var(--branco); padding: 20px; display: flex; flex-direction: column; }
 .sidebar-header { text-align: center; margin-bottom: 20px; }
@@ -146,7 +191,8 @@ td { padding: 15px; border-bottom: 1px solid var(--borda); }
     .card-header { flex-direction: row; align-items: center; }
     .card-footer-info { flex-direction: row; }
     
-    /* Expansão das colunas (Grid Mágico) */
+    /* Expansão das colunas */
+    .section-title{ margin-top: 1rem;}
     .dashboard-grid { grid-template-columns: 2fr 1fr; }
     .boletim-stats-row { grid-template-columns: 1fr 1fr 2fr; }
     .boletim-details-grid { grid-template-columns: 1fr 2fr; }

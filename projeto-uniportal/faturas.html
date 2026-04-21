@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniPortal - Faturas</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="app-layout">
+
+    <aside class="sidebar">
+        <header class="sidebar-header">
+            <h2 class="logo">UniPortal</h2>
+        </header>
+        
+        <section class="user-profile">
+            <figure class="avatar">JS</figure>
+            <address class="user-info">
+                <strong>Jo&atilde;o Silva</strong>
+                <span>RA: 2512130067</span>
+            </address>
+        </section>
+
+        <nav>
+            <menu>
+                <li><a href="home.html">In&iacute;cio</a></li>
+                <li><a href="disciplinas.html">Disciplinas</a></li>
+                <li><a href="boletim.html">Boletim</a></li>
+                <li><a href="#">Carteirinha</a></li>
+                <li><a href="faturas.html">Faturas</a></li>
+            </menu>
+        </nav>
+        <footer>
+            <button id="btnSair" class="btn-logout">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                    <polyline points="16 17 21 12 16 7"></polyline>
+                    <line x1="21" y1="12" x2="9" y2="12"></line>
+                </svg>
+                Sair
+            </button>
+        </footer>
+    </aside>
+
+    <main class="content">
+        <header class="top-header">
+            <hgroup class="header-titles">
+                <h1>Faturas</h1>
+                <p>segunda-feira, 20 de abril de 2026</p>
+            </hgroup>
+            <section class="header-badges">
+                <span class="badge badge-red">5&ordm; Semestre</span>
+                <span class="badge badge-dark">Ci&ecirc;ncia da Computa&ccedil;&atilde;o</span>
+            </section>
+        </header>
+
+        <section class="faturas-layout">
+            <section class="faturas-main">
+                <input class="faturas-tab-input" type="radio" name="faturas-tab" id="tab-pendentes" checked>
+                <input class="faturas-tab-input" type="radio" name="faturas-tab" id="tab-historico">
+
+                <nav class="faturas-tabs" aria-label="Se&ccedil;&otilde;es de faturas">
+                    <label for="tab-pendentes">Pendentes</label>
+                    <label for="tab-historico">Hist&oacute;rico</label>
+                </nav>
+
+                <section class="faturas-panels">
+                    <section class="faturas-panel faturas-panel--pendentes" id="painel-pendentes">
+                        <article class="card fatura-item" id="pendentes">
+                            <header class="fatura-info">
+                                <h3>Mensalidade Mar&ccedil;o/2026</h3>
+                                <p>Vencimento: 28/03/2026</p>
+                            </header>
+                            <footer class="fatura-meta">
+                                <strong class="fatura-valor">R$ 850,00</strong>
+                                <button class="btn-acao fatura-pagar" type="button">Pagar agora</button>
+                            </footer>
+                        </article>
+                    </section>
+
+                    <section class="faturas-panel faturas-panel--historico" id="painel-historico">
+                        <article class="card fatura-item fatura-item--historico">
+                            <header class="fatura-info">
+                                <h3>Mensalidade Fevereiro/2026</h3>
+                                <p>Pago em: 20/02/2026</p>
+                            </header>
+                            <footer class="fatura-meta">
+                                <strong class="fatura-valor">R$ 850,00</strong>
+                                <span class="fatura-status fatura-status--pago">Pago</span>
+                            </footer>
+                        </article>
+
+                        <article class="card fatura-item fatura-item--historico">
+                            <header class="fatura-info">
+                                <h3>Mensalidade Janeiro/2026</h3>
+                                <p>Pago em: 18/01/2026</p>
+                            </header>
+                            <footer class="fatura-meta">
+                                <strong class="fatura-valor">R$ 850,00</strong>
+                                <span class="fatura-status fatura-status--pago">Pago</span>
+                            </footer>
+                        </article>
+
+                        <article class="card fatura-item fatura-item--historico">
+                            <header class="fatura-info">
+                                <h3>Mensalidade Dezembro/2025</h3>
+                                <p>Pago em: 10/12/2025</p>
+                            </header>
+                            <footer class="fatura-meta">
+                                <strong class="fatura-valor">R$ 820,00</strong>
+                                <span class="fatura-status fatura-status--pago">Pago</span>
+                            </footer>
+                        </article>
+
+                        <article class="card fatura-item fatura-item--historico">
+                            <header class="fatura-info">
+                                <h3>Mensalidade Novembro/2025</h3>
+                                <p>Pago em: 05/11/2025</p>
+                            </header>
+                            <footer class="fatura-meta">
+                                <strong class="fatura-valor">R$ 820,00</strong>
+                                <span class="fatura-status fatura-status--pago">Pago</span>
+                            </footer>
+                        </article>
+                    </section>
+                </section>
+            </section>
+
+            <aside class="card finance-summary">
+                <h2 class="section-title">Resumo financeiro</h2>
+                <ul class="summary-list">
+                    <li class="summary-line">
+                        <span>Mensalidade atual</span>
+                        <strong>R$ 850,00</strong>
+                    </li>
+                    <li class="summary-line summary-line--desconto">
+                        <span>Desconto aplicado</span>
+                        <strong>- R$ 0,00</strong>
+                    </li>
+                    <li class="summary-line summary-line--multa">
+                        <span>Multa / Juros</span>
+                        <strong>+ R$ 0,00</strong>
+                    </li>
+                </ul>
+                <p class="summary-total">
+                    <span>Total pendente</span>
+                    <strong>R$ 850,00</strong>
+                </p>
+                <button class="btn-acao" type="button">Pagar R$ 850,00</button>
+                <p class="summary-note">Pagamento via PIX ou boleto banc&aacute;rio</p>
+            </aside>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

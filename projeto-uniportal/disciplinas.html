@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniPortal - Disciplinas</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="app-layout">
+    
+    <aside class="sidebar">
+        <header class="sidebar-header">
+            <h2 class="logo">UniPortal</h2>
+        </header>
+        
+        <section class="user-profile">
+            <figure class="avatar">JS</figure>
+            <address class="user-info">
+                <strong>João Silva</strong>
+                <span>RA: 2512130067</span>
+            </address>
+        </section>
+
+        <nav>
+            <menu>
+                <li><a href="home.html" class=> Início</a></li>
+                <li><a href="disciplinas.html"> Disciplinas</a></li>
+                <li><a href="boletim.html"> Boletim</a></li>
+                <li><a href="#"> Carteirinha</a></li>
+                <li><a href="#">💲Faturas</a></li>
+            </menu>
+        </nav>
+        <footer>
+            <button id="btnSair" class="btn-logout">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                Sair
+            </button>
+        </footer>
+    </aside>
+
+    <main class="content">
+        <header class="top-header">
+            <h1>Minhas Disciplinas</h1>
+            <p>Lista completa das matérias do semestre.</p>
+        </header>
+        <section class="grid-cards" id="listaDisciplinasCards">
+            <table>
+            <thead>
+                <tr>
+                    <th>Disciplina</th>
+                    <th>Professor</th>
+                    <th>Local</th>
+                </tr>
+            </thead>
+            <tbody id="corpoTabela"></tbody>
+        </table>
+        </section>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>

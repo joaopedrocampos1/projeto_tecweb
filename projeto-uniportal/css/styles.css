@@ -102,14 +102,15 @@ body.app-layout {
 .header-badges { display: flex; flex-wrap: wrap; gap: 10px; }
 
 /* --- COMPONENTES REUTILIZÁVEIS (Tags e Cards) --- */
-.badge, .tag { padding: 6px 12px; border-radius: 20px; font: bold 0.8rem sans-serif; }
+.badge, .tag { padding: 6px 12px; border-radius: 20px;   font: bold 0.8rem 'Poppins', sans-serif; /* fonte */display: inline-flex;    /* Transforma a tag num micro-layout */align-items: center;     /* Crava o texto no meio exato da vertical */justify-content: center; /* Crava no meio da horizontal */    line-height: 1;          /* Remove aquele "respiro" invisível das fontes */
+}
 .badge-red { background: var(--vermelho-uni); color: var(--branco); }
 .badge-dark { background: #333; color: var(--branco); }
 .tag-green { background: #e8f8f5; color: #27ae60; }
 .tag-yellow { background: #fef9e7; color: #f39c12; }
 .tag-gray { background: #f0f0f0; color: #7f8c8d; }
 
-/* AGRUPAMENTO MÁGICO: Todos os cards do site ganham o fundo branco e a borda aqui */
+/* Todos os cards do site ganham o fundo branco e a borda aqui */
 .card, .stat-box, .distribuicao-card, .boletim-materia-card { background: var(--branco); border: 1px solid var(--borda); padding: 20px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
 
 /* --- GRIDS (1 coluna no celular) --- */
@@ -451,7 +452,7 @@ td { padding: 15px; border-bottom: 1px solid var(--borda); }
    ============================================================ */
 body.dark-theme {
     /* Redefinindo as variáveis principais */
-    --vermelho-uni: #d32f2f; /* Vermelho mais vibrante para contraste no escuro */
+    --vermelho-uni: #8b0000; 
     --branco: #1e1e1e;       /* Fundo dos cards e barra lateral */
     --fundo: #121212;        /* Fundo geral da página */
     --texto: #f4f4f4;        /* Texto principal claro */
@@ -464,6 +465,7 @@ body.dark-theme .sidebar {
     background-color: var(--branco);
     border-right: 1px solid var(--borda);
 }
+
 
 /* Forçando os textos a ficarem claros */
 body.dark-theme h1, 
@@ -523,7 +525,7 @@ body.dark-theme.login-page {
     color: var(--texto);
 }
 
-/* 2. ESCURECER TODAS AS CAIXAS BRANCAS DO SITE (AGRUPAMENTO MÁGICO ESCURO) */
+/* 2. ESCURECER TODAS AS CAIXAS BRANCAS DO SITE */
 body.dark-theme .card, 
 body.dark-theme .stat-box, 
 body.dark-theme .distribuicao-card, 
@@ -537,6 +539,12 @@ body.dark-theme .student-card-qr,
 body.dark-theme .validation-qr {
     background-color: #1e1e1e !important;
     border-color: var(--borda) !important;
+}
+
+body.dark-theme #tab-pendentes:checked ~ .faturas-tabs label[for="tab-pendentes"], #tab-historico:checked ~ .faturas-tabs label[for="tab-historico"] {
+    background: var(--vermelho-uni);
+    color: white;
+    box-shadow: 0 8px 18px rgba(141, 0, 0, 0.18);
 }
 
 /* 3. FORÇAR TEXTOS PRINCIPAIS A FICAREM CLAROS (H1, H2, H3, P, etc) */

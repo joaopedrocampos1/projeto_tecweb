@@ -1,19 +1,12 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UniPortal - Carteirinha</title>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
-    
+    <title>Document</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-
-<body class="app-layout">
+<body>
     
     <aside class="sidebar">
         <header class="sidebar-header">
@@ -23,40 +16,20 @@
         <section class="user-profile">
             <figure class="avatar">JS</figure>
             <address class="user-info">
-                <strong>João Silva</strong>
+                <strong>Jo&atilde;o Silva</strong>
                 <span>RA: 2512130067</span>
             </address>
         </section>
 
         <nav>
-    <menu>
-        <li>
-            <a href="home.html">
-                <i class="fa-solid fa-house"></i> Início
-            </a>
-        </li>
-        <li>
-            <a href="disciplinas.html">
-                <i class="fa-solid fa-book"></i> Disciplinas
-            </a>
-        </li>
-        <li>
-            <a href="boletim.html">
-                <i class="fa-solid fa-chart-simple"></i> Boletim
-            </a>
-        </li>
-        <li>
-            <a href="carteirinha.html">
-                <i class="fa-solid fa-id-card"></i> Carteirinha
-            </a>
-        </li>
-        <li>
-            <a href="faturas.html">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Faturas
-            </a>
-        </li>
-    </menu>
-</nav>
+            <menu>
+                <li><a href="home.html" class=> Início</a></li>
+                <li><a href="disciplinas.html"> Disciplinas</a></li>
+                <li><a href="boletim.html"> Boletim</a></li>
+                <li><a href="carteirinha.html"> Carteirinha</a></li>
+                <li><a href="faturas.html"> Faturas</a></li>
+            </menu>
+        </nav>
         <footer>
             <button id="btnSair" class="btn-logout">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -69,19 +42,16 @@
         </footer>
     </aside>
 
-  
-    <main class="content">
+    <main class="content" id="pagina-carteirinha">
         <header class="top-header">
-            <hgroup class="header-titles">
-                <h1>Início</h1>
-                <p>segunda-feira, 20 de abril de 2026</p>
-            </hgroup>
+            <section class="header-titles">
+                <h1>Carteirinha Estudantil</h1>
+                <p id="dataPagina">ter&ccedil;a-feira, 21 de abril de 2026</p>
+            </section>
+
             <section class="header-badges">
-                <span class="badge badge-red">5º Semestre</span>
-                <span class="badge badge-dark">Ciência da Computação</span>
-                <button id="btnTema" class="btn-tema-topo" aria-label="Alternar tema">
-                🌙 Escuro
-                </button>
+                <p class="badge badge-red" id="badgeSemestre">5&ordm; Semestre</p>
+                <p class="badge badge-dark" id="badgeCurso">Ci&ecirc;ncia da Computa&ccedil;&atilde;o</p>
             </section>
         </header>
 
@@ -91,11 +61,11 @@
                     <header class="student-card-header">
                         <section class="student-card-brand">
                             <h2 class="student-card-logo">UniPortal</h2>
-                            <p class="student-card-subtitle">Portal Acadêmico</p>
+                            <p class="student-card-subtitle">Portal Acad&ecirc;mico</p>
                         </section>
 
                         <p class="student-card-validity" id="validadeCarteirinhaTopo">
-                            Válido até: 12/2027
+                            V&aacute;lido at&eacute;: 12/2027
                         </p>
                     </header>
 
@@ -105,16 +75,16 @@
                         </figure>
 
                         <section class="student-main-info">
-                            <h3 id="nomeAluno">João Silva</h3>
+                            <h3 id="nomeAluno">Jo&atilde;o Silva</h3>
                             <p id="raAluno">RA: 2512130067</p>
-                            <p id="cursoAluno">Ciência da Computação</p>
+                            <p id="cursoAluno">Ci&ecirc;ncia da Computa&ccedil;&atilde;o</p>
                         </section>
                     </section>
 
                     <footer class="student-card-footer">
                         <section class="student-semester">
                             <p>Semestre Atual</p>
-                            <strong id="semestreAluno">5º Semestre - 2026</strong>
+                            <strong id="semestreAluno">5&ordm; Semestre - 2026</strong>
                         </section>
 
                         <figure class="student-card-qr" id="qrCarteirinha" aria-label="QR Code da carteirinha">
@@ -124,7 +94,7 @@
                 </article>
 
                 <p class="carteirinha-note" id="observacaoCarteirinha">
-                    Documento de identificação válido em toda a instituição
+                    Documento de identifica&ccedil;&atilde;o v&aacute;lido em toda a institui&ccedil;&atilde;o
                 </p>
             </article>
 
@@ -132,27 +102,31 @@
                 <article class="card info-card" id="dadosAluno">
                     <ul class="info-list">
                         <li class="info-item">
+                            <span class="info-icon" aria-hidden="true"></span>
                             <section class="info-content">
-                                <p class="info-label">Matrícula</p>
+                                <p class="info-label">Matr&iacute;cula</p>
                                 <strong class="info-value" id="matriculaAlunoInfo">2512130067</strong>
                             </section>
                         </li>
 
                         <li class="info-item">
+                            <span class="info-icon" aria-hidden="true"></span>
                             <section class="info-content">
                                 <p class="info-label">Curso</p>
-                                <strong class="info-value" id="cursoAlunoInfo">Ciência da Computação</strong>
+                                <strong class="info-value" id="cursoAlunoInfo">Ci&ecirc;ncia da Computa&ccedil;&atilde;o</strong>
                             </section>
                         </li>
 
                         <li class="info-item">
+                            <span class="info-icon" aria-hidden="true"></span>
                             <section class="info-content">
                                 <p class="info-label">Semestre Atual</p>
-                                <strong class="info-value" id="semestreAlunoInfo">5º Semestre - 2026/1</strong>
+                                <strong class="info-value" id="semestreAlunoInfo">5&ordm; Semestre - 2026/1</strong>
                             </section>
                         </li>
 
                         <li class="info-item">
+                            <span class="info-icon" aria-hidden="true"></span>
                             <section class="info-content">
                                 <p class="info-label">Validade</p>
                                 <strong class="info-value" id="validadeAlunoInfo">Dezembro de 2027</strong>
@@ -167,13 +141,12 @@
                     </figure>
 
                     <p class="validation-text" id="textoValidacao">
-                        Escaneie o QR Code para validar a autenticidade desta carteirinha junto à secretaria.
+                        Escaneie o QR Code para validar a autenticidade desta carteirinha estudantil junto &agrave; secretaria da institui&ccedil;&atilde;o.
                     </p>
                 </article>
             </aside>
         </section>
     </main>
 
-    <script src="js/script.js"></script>
 </body>
 </html>

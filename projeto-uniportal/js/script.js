@@ -126,7 +126,12 @@ if (containerCards && listaMiniNotas) {
    7. MENU LATERAL
    ============================================================ */
 function configurarMenuLateral() {
-    
+    const linksDoMenu = document.querySelectorAll(".sidebar menu a");
+
+    if (linksDoMenu[4]) {
+        linksDoMenu[4].setAttribute("href", "faturas.html");
+        linksDoMenu[4].textContent = "Faturas";
+    }
 }
 
 function marcarMenuAtivo() {
@@ -147,27 +152,3 @@ function marcarMenuAtivo() {
 configurarMenuLateral();
 marcarMenuAtivo();
 verificarProtecaoDePagina();
-
-// Substitua o trecho antigo do Tema Escuro por este:
-const btnTema = document.getElementById("btnTema");
-const body = document.body;
-
-if (localStorage.getItem("uniPortal_temaEscuro") === "true") {
-    body.classList.add("dark-theme");
-    if (btnTema) btnTema.innerHTML = "☀️ Claro";
-}
-
-if (btnTema) {
-    btnTema.addEventListener("click", function(e) {
-        e.preventDefault();
-        body.classList.toggle("dark-theme");
-        
-        if (body.classList.contains("dark-theme")) {
-            localStorage.setItem("uniPortal_temaEscuro", "true");
-            btnTema.innerHTML = "☀️ Claro";
-        } else {
-            localStorage.setItem("uniPortal_temaEscuro", "false");
-            btnTema.innerHTML = "🌙 Escuro";
-        }
-    });
-}

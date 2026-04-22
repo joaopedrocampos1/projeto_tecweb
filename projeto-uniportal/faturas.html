@@ -4,32 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UniPortal - Faturas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="app-layout">
 
     <aside class="sidebar">
-        <header class="sidebar-header">
-            <h2 class="logo">UniPortal</h2>
-        </header>
+        <header class="sidebar-header"><h2 class="logo">UniPortal</h2></header>
         
         <section class="user-profile">
             <figure class="avatar">JS</figure>
             <address class="user-info">
-                <strong>Jo&atilde;o Silva</strong>
+                <strong>João Silva</strong>
                 <span>RA: 2512130067</span>
             </address>
         </section>
 
         <nav>
             <menu>
-                <li><a href="home.html" class=> Início</a></li>
-                <li><a href="disciplinas.html"> Disciplinas</a></li>
-                <li><a href="boletim.html"> Boletim</a></li>
-                <li><a href="carteirinha.html"> Carteirinha</a></li>
-                <li><a href="faturas.html"> Faturas</a></li>
+                <li><a href="home.html"><i class="fa-solid fa-house"></i> Início</a></li>
+                <li><a href="disciplinas.html"><i class="fa-solid fa-book"></i> Disciplinas</a></li>
+                <li><a href="boletim.html"><i class="fa-solid fa-chart-simple"></i> Boletim</a></li>
+                <li><a href="carteirinha.html"><i class="fa-solid fa-id-card"></i> Carteirinha</a></li>
+                <li><a href="faturas.html"><i class="fa-solid fa-file-invoice-dollar"></i> Faturas</a></li>
             </menu>
         </nav>
+        
         <footer>
             <button id="btnSair" class="btn-logout">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -46,11 +49,12 @@
         <header class="top-header">
             <hgroup class="header-titles">
                 <h1>Faturas</h1>
-                <p>segunda-feira, 13 de abril de 2026</p>
+                <p>segunda-feira, 20 de abril de 2026</p>
             </hgroup>
             <section class="header-badges">
-                <span class="badge badge-red">5&ordm; Semestre</span>
-                <span class="badge badge-dark">Ci&ecirc;ncia da Computa&ccedil;&atilde;o</span>
+                <span class="badge badge-red">5º Semestre</span>
+                <span class="badge badge-dark">Ciência da Computação</span>
+                <button id="btnTema" class="btn-tema-topo" aria-label="Alternar tema">🌙 Escuro</button>
             </section>
         </header>
 
@@ -59,16 +63,16 @@
                 <input class="faturas-tab-input" type="radio" name="faturas-tab" id="tab-pendentes" checked>
                 <input class="faturas-tab-input" type="radio" name="faturas-tab" id="tab-historico">
 
-                <nav class="faturas-tabs" aria-label="Se&ccedil;&otilde;es de faturas">
+                <nav class="faturas-tabs" aria-label="Seções de faturas">
                     <label for="tab-pendentes">Pendentes</label>
-                    <label for="tab-historico">Hist&oacute;rico</label>
+                    <label for="tab-historico">Histórico</label>
                 </nav>
 
                 <section class="faturas-panels">
                     <section class="faturas-panel faturas-panel--pendentes" id="painel-pendentes">
                         <article class="card fatura-item" id="pendentes">
                             <header class="fatura-info">
-                                <h3>Mensalidade Mar&ccedil;o/2026</h3>
+                                <h3>Mensalidade Março/2026</h3>
                                 <p>Vencimento: 28/03/2026</p>
                             </header>
                             <footer class="fatura-meta">
@@ -89,39 +93,6 @@
                                 <span class="fatura-status fatura-status--pago">Pago</span>
                             </footer>
                         </article>
-
-                        <article class="card fatura-item fatura-item--historico">
-                            <header class="fatura-info">
-                                <h3>Mensalidade Janeiro/2026</h3>
-                                <p>Pago em: 18/01/2026</p>
-                            </header>
-                            <footer class="fatura-meta">
-                                <strong class="fatura-valor">R$ 850,00</strong>
-                                <span class="fatura-status fatura-status--pago">Pago</span>
-                            </footer>
-                        </article>
-
-                        <article class="card fatura-item fatura-item--historico">
-                            <header class="fatura-info">
-                                <h3>Mensalidade Dezembro/2025</h3>
-                                <p>Pago em: 10/12/2025</p>
-                            </header>
-                            <footer class="fatura-meta">
-                                <strong class="fatura-valor">R$ 820,00</strong>
-                                <span class="fatura-status fatura-status--pago">Pago</span>
-                            </footer>
-                        </article>
-
-                        <article class="card fatura-item fatura-item--historico">
-                            <header class="fatura-info">
-                                <h3>Mensalidade Novembro/2025</h3>
-                                <p>Pago em: 05/11/2025</p>
-                            </header>
-                            <footer class="fatura-meta">
-                                <strong class="fatura-valor">R$ 820,00</strong>
-                                <span class="fatura-status fatura-status--pago">Pago</span>
-                            </footer>
-                        </article>
                     </section>
                 </section>
             </section>
@@ -129,29 +100,16 @@
             <aside class="card finance-summary">
                 <h2 class="section-title">Resumo financeiro</h2>
                 <ul class="summary-list">
-                    <li class="summary-line">
-                        <span>Mensalidade atual</span>
-                        <strong>R$ 850,00</strong>
-                    </li>
-                    <li class="summary-line summary-line--desconto">
-                        <span>Desconto aplicado</span>
-                        <strong>- R$ 0,00</strong>
-                    </li>
-                    <li class="summary-line summary-line--multa">
-                        <span>Multa / Juros</span>
-                        <strong>+ R$ 0,00</strong>
-                    </li>
+                    <li class="summary-line"><span>Mensalidade atual</span><strong>R$ 850,00</strong></li>
+                    <li class="summary-line summary-line--desconto"><span>Desconto aplicado</span><strong>- R$ 0,00</strong></li>
+                    <li class="summary-line summary-line--multa"><span>Multa / Juros</span><strong>+ R$ 0,00</strong></li>
                 </ul>
-                <p class="summary-total">
-                    <span>Total pendente</span>
-                    <strong>R$ 850,00</strong>
-                </p>
+                <p class="summary-total"><span>Total pendente</span><strong>R$ 850,00</strong></p>
                 <button class="btn-acao" type="button">Pagar R$ 850,00</button>
-                <p class="summary-note">Pagamento via PIX ou boleto banc&aacute;rio</p>
+                <p class="summary-note">Pagamento via PIX ou boleto bancário</p>
             </aside>
         </section>
     </main>
-
     <script src="js/script.js"></script>
 </body>
 </html>

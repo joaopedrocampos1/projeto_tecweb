@@ -3,22 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UniPortal</title>
-    
+    <title>UniPortal - Boletim</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body class="app-layout">
     
     <aside class="sidebar">
-        <header class="sidebar-header">
-            <h2 class="logo">UniPortal</h2>
-        </header>
+        <header class="sidebar-header"><h2 class="logo">UniPortal</h2></header>
         
         <section class="user-profile">
             <figure class="avatar">JS</figure>
@@ -30,16 +25,21 @@
 
         <nav>
             <menu>
-                <li><a href="home.html" class=> Início</a></li>
-                <li><a href="disciplinas.html"> Disciplinas</a></li>
-                <li><a href="boletim.html"> Boletim</a></li>
-                <li><a href="carteirinha.html"> Carteirinha</a></li>
-                <li><a href="faturas.html"> Faturas</a></li>
+                <li><a href="home.html"><i class="fa-solid fa-house"></i> Início</a></li>
+                <li><a href="disciplinas.html"><i class="fa-solid fa-book"></i> Disciplinas</a></li>
+                <li><a href="boletim.html"><i class="fa-solid fa-chart-simple"></i> Boletim</a></li>
+                <li><a href="carteirinha.html"><i class="fa-solid fa-id-card"></i> Carteirinha</a></li>
+                <li><a href="faturas.html"><i class="fa-solid fa-file-invoice-dollar"></i> Faturas</a></li>
             </menu>
         </nav>
+        
         <footer>
             <button id="btnSair" class="btn-logout">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                    <polyline points="16 17 21 12 16 7"></polyline>
+                    <line x1="21" y1="12" x2="9" y2="12"></line>
+                </svg>
                 Sair
             </button>
         </footer>
@@ -48,15 +48,13 @@
     <main class="content">
         <header class="top-header">
             <hgroup class="header-titles">
-                <h1>Boletim de Notas</h1>
-                <p>segunda-feira, 13 de abril de 2026</p>
+                <h1>Boletim</h1>
+                <p>segunda-feira, 20 de abril de 2026</p>
             </hgroup>
             <section class="header-badges">
                 <span class="badge badge-red">5º Semestre</span>
                 <span class="badge badge-dark">Ciência da Computação</span>
-                <button id="btnTema" class="btn-tema-topo" aria-label="Alternar tema">
-                🌙 Escuro
-                </button>
+                <button id="btnTema" class="btn-tema-topo" aria-label="Alternar tema">🌙 Escuro</button>
             </section>
         </header>
 
@@ -83,7 +81,6 @@
         </section>
 
         <section class="boletim-details-grid">
-            
             <aside class="distribuicao-card">
                 <h4>DISTRIBUIÇÃO DE NOTAS</h4>
                 <figure class="circulo-media">
@@ -92,16 +89,11 @@
                         <p>Média</p>
                     </div>
                 </figure>
-                <ul class="lista-mini-notas" id="listaMiniNotas">
-                    </ul>
+                <ul class="lista-mini-notas" id="listaMiniNotas"></ul>
             </aside>
-
-            <section class="disciplinas-column" id="cardsBoletim">
-                </section>
-
+            <section class="disciplinas-column" id="cardsBoletim"></section>
         </section>
     </main>
-    
     <script src="js/script.js"></script>
 </body>
 </html>

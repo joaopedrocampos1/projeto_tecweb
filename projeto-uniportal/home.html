@@ -3,9 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UniPortal - Home</title>
+    <title>UniPortal - Carteirinha</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body class="app-layout">
     
     <aside class="sidebar">
@@ -16,18 +23,18 @@
         <section class="user-profile">
             <figure class="avatar">JS</figure>
             <address class="user-info">
-                <strong>João Silva</strong>
+                <strong>Jo&atilde;o Silva</strong>
                 <span>RA: 2512130067</span>
             </address>
         </section>
 
         <nav>
             <menu>
-                <li><a href="home.html" class="active"> Início</a></li>
+                <li><a href="home.html" class=> Início</a></li>
                 <li><a href="disciplinas.html"> Disciplinas</a></li>
                 <li><a href="boletim.html"> Boletim</a></li>
-                <li><a href="#"> Carteirinha</a></li>
-                <li><a href="#">💲Faturas</a></li>
+                <li><a href="carteirinha.html"> Carteirinha</a></li>
+                <li><a href="faturas.html"> Faturas</a></li>
             </menu>
         </nav>
         <footer>
@@ -41,12 +48,12 @@
     <main class="content">
         <header class="top-header">
             <hgroup class="header-titles">
-                <h1>Início</h1>
-                <p>segunda-feira, 20 de abril de 2026</p>
+                <h1>In&iacute;cio</h1>
+                <p>segunda-feira, 13 de abril de 2026</p>
             </hgroup>
             <section class="header-badges">
-                <span class="badge badge-red">5º Semestre</span>
-                <span class="badge badge-dark">Ciência da Computação</span>
+                <span class="badge badge-red">5&ordm; Semestre</span>
+                <span class="badge badge-dark">Ci&ecirc;ncia da Computa&ccedil;&atilde;o</span>
             </section>
         </header>
 
@@ -61,48 +68,50 @@
                     </header>
                     <p class="prof-name">Prof. Marcelo Alves Farias</p>
                     <footer class="card-footer-info">
-                        <span>🕒 11:00 - 12:15</span>
-                        <span>📍 Sala PA85 — Bloco J</span>
+                        <span>11:00 - 12:15</span>
+                        <span>Sala PA85 - Bloco J</span>
                     </footer>
                 </article>
 
-                <h2 class="section-title">PRÓXIMAS AULAS</h2>
+                <h2 class="section-title">PR&Oacute;XIMAS AULAS</h2>
                 <article class="card">
                     <header class="card-header">
-                        <h3>Cálculo Numérico</h3>
+                        <h3>C&aacute;lculo Num&eacute;rico</h3>
                         <span class="tag-turma">Seg - 08:15</span>
                     </header>
                     <p class="prof-name">Prof. Valnei Alves Fernandes</p>
                     <footer class="card-footer-info">
-                        <span>📍 Sala PCA2</span>
+                        <span>Sala PCA2</span>
                     </footer>
                 </article>
             </section>
 
             <aside class="side-column">
-                <h2 class="section-title">PENDÊNCIAS</h2>
+                <h2 class="section-title">PEND&Ecirc;NCIAS</h2>
                 <article class="card card-alerta">
                     <header class="card-header">
-                        <h3 class="red-text">💲 Cobrança</h3>
+                        <h3 class="red-text">Cobran&ccedil;a</h3>
                         <span class="tag-pendente">Pendente</span>
                     </header>
-                    <p>Mensalidade Março/2026</p>
+                    <p>Mensalidade Mar&ccedil;o/2026</p>
                     <p>Vencimento: 28/03/2026</p>
                     <h4 class="preco">R$ 850,00</h4>
-                    <button class="btn-acao">➔ Ver faturas</button>
+                    <a class="btn-acao" href="faturas.html#pendentes">Ver faturas</a>
                 </article>
 
-                <h2 class="section-title">SITUAÇÃO ACADÊMICA</h2>
+                <h2 class="section-title">SITUA&Ccedil;&Atilde;O ACAD&Ecirc;MICA</h2>
                 <article class="card">
                     <section class="stats-row">
-                        <span class="stat green">Média 8.1</span>
+                        <span class="stat green">M&eacute;dia 8.1</span>
                         <span class="stat blue">Freq. 86%</span>
                     </section>
-                    <p class="status-msg">Desempenho acima da média. <strong>Continue assim! 🚀</strong></p>
+                    <p class="status-msg">Desempenho acima da m&eacute;dia. <strong>Continue assim!</strong></p>
                 </article>
             </aside>
 
         </section>
     </main>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

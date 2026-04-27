@@ -17,7 +17,7 @@ const notasBoletim = [
 
 /* ============================================================
    2. SEGURANÇA DAS PÁGINAS
-   ============================================================ */
+   ============================================================ */  
 function verificarProtecaoDePagina() {
     const estaLogado = localStorage.getItem("uniPortal_logado");
     const paginaAtual = window.location.pathname;
@@ -105,24 +105,24 @@ if (containerCards && listaMiniNotas) {
         const article = document.createElement("article");
         article.className = "boletim-materia-card";
         article.innerHTML = `
-            <div class="materia-cabecalho">
-                <div class="materia-info">
+            <header class="materia-cabecalho">
+                <section class="materia-info">
                     <h3>${materia.nome}</h3>
                     <span>${materia.codigo}</span>
-                </div>
-                <div class="materia-nota">${materia.nota.toFixed(1)}</div>
-            </div>
-            <div class="materia-frequencia">
+                </section>
+                <strong class="materia-nota">${materia.nota.toFixed(1)}</strong>
+            </header>
+            <section class="materia-frequencia">
                 <p>Frequência - ${materia.freq}%</p>
-                <div class="barra-fundo">
-                    <div class="barra-preenchida" style="width: ${materia.freq}%; background-color: ${materia.corFreq};"></div>
-                </div>
-                <div class="barra-legendas">
+                <span class="barra-fundo" role="progressbar" aria-valuenow="${materia.freq}" aria-valuemin="0" aria-valuemax="100">
+                    <span class="barra-preenchida" style="width: ${materia.freq}%; background-color: ${materia.corFreq};"></span>
+                </span>
+                <nav class="barra-legendas" aria-label="Legendas de frequência">
                     <span>0%</span>
                     <span class="minimo">75% min.</span>
                     <span>100%</span>
-                </div>
-            </div>
+                </nav>
+            </section>
         `;
         containerCards.appendChild(article);
 
